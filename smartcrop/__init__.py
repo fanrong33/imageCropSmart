@@ -166,6 +166,7 @@ def smart_crop(image, target_width, target_height, destination, do_resize):
 
     cropped = original[int(crop_pos['top']): int(crop_pos['bottom']), int(crop_pos['left']): int(crop_pos['right'])]
     cv2.imwrite(destination, cropped)
+    return crop_pos
 
 
 def main():
